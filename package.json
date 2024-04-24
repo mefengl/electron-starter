@@ -2,9 +2,9 @@
   "name": "electron-starter",
   "version": "1.0.0",
   "description": "An Electron application with React and TypeScript",
-  "main": "./out/main/index.js",
   "author": "example.com",
   "homepage": "https://electron-vite.org",
+  "main": "./out/main/index.js",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -25,7 +25,9 @@
     "@electron-toolkit/utils": "^3.0.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.15.0",
     "@electron-toolkit/tsconfig": "^1.0.1",
+    "@eslint/eslintrc": "^3.0.2",
     "@types/node": "^18.19.9",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
@@ -33,14 +35,12 @@
     "electron": "^28.2.0",
     "electron-builder": "^24.9.1",
     "electron-vite": "^2.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-tailwindcss": "^3.15.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3",
-    "vite": "^5.0.12",
-    "@antfu/eslint-config": "^2.15.0",
-    "eslint": "^8.57.0",
-    "@eslint/eslintrc": "^3.0.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-tailwindcss": "^3.15.1"
+    "vite": "^5.0.12"
   }
 }

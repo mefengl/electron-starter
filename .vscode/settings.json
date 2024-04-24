@@ -48,6 +48,6 @@
     "jsonc",
     "yaml",
     "toml",
-    "astro",
+    "astro"
   ]
 }

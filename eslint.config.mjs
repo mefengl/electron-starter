@@ -3,7 +3,11 @@ import { FlatCompat } from '@eslint/eslintrc'
 
 const compat = new FlatCompat()
 
-export default antfu({}, ...compat.config({
+export default antfu({
+  rules: {
+    'node/prefer-global/process': 'off',
+  },
+}, ...compat.config({
   extends: [
     'plugin:tailwindcss/recommended',
     'plugin:react-hooks/recommended',
