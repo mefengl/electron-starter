@@ -8,6 +8,11 @@ export default antfu({
     'node/prefer-global/process': 'off',
   },
 }, ...compat.config({
+  ignorePatterns: [
+    'src/renderer/src/components/ui/*',
+    'src/renderer/src/lib/utils.ts',
+  ],
+}), ...compat.config({
   extends: [
     'plugin:tailwindcss/recommended',
     'plugin:react-hooks/recommended',
