@@ -1,10 +1,20 @@
 # electron-starter
 
-An Electron application with React and TypeScript
+Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) framework.
+
+## Addons
+
+- eslint: [eslint-config](https://github.com/antfu/eslint-config)
+- tailwindcss
+- shadcn/ui: [shadcn/ui](https://ui.shadcn.com)
+
+## Notice
+
+The automatic import of UI components with aliases is not functioning correctly. For instance, instead of getting `import { Button } from "@renderer/components/ui/button";`, you may receive `import { Button } from "./components/ui/button";`. Currently, manual updating is required. If you have a solution to fix this issue, please submit an issue or pull request.
 
 ## Recommended IDE Setup
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ## Project Setup
 
