@@ -21,12 +21,12 @@ function App(): JSX.Element {
       </p>
       <div>
         <div>
-          <a href="https://electron-vite.org/" target="_blank" rel="noreferrer">
+          <a href="https://electron-vite.org/" rel="noreferrer" target="_blank">
             Documentation
           </a>
         </div>
         <div>
-          <a target="_blank" rel="noreferrer" onClick={ipcHandle}>
+          <a onClick={ipcHandle} rel="noreferrer" target="_blank">
             Send IPC
           </a>
         </div>
