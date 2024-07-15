@@ -4,13 +4,16 @@ Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) fr
 
 ## Addons
 
-- eslint: [eslint-config](https://github.com/antfu/eslint-config)
-- tailwindcss
+- @tanstack/router: [tanstack/router](https://tanstack.com/router)
 - shadcn/ui: [shadcn/ui](https://ui.shadcn.com)
+- tailwindcss
+- eslint: [eslint-config](https://github.com/antfu/eslint-config)
 
 ## Notice
 
-The automatic import of UI components with aliases is not functioning correctly. For instance, instead of getting `import { Button } from "@renderer/components/ui/button";`, you may receive `import { Button } from "./components/ui/button";`. Currently, manual updating is required. If you have a solution to fix this issue, please submit an issue or pull request.
+The automatic import of UI components with aliases is not functioning correctly. For instance, instead of getting `import { Button } from "@renderer/components/ui/button";`, you may receive `import { Button } from "./components/ui/button";`.
+
+> Currently, manual updating is required. If you have a solution to fix this issue, please submit an issue or pull request.
 
 ## Recommended IDE Setup
 
@@ -21,13 +24,13 @@ The automatic import of UI components with aliases is not functioning correctly.
 ### Install
 
 ```bash
-$ npm install
+npm install
 ```
 
 ### Development
 
 ```bash
-$ npm run dev
+npm run dev
 ```
 
 ### Build
