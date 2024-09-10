@@ -2,6 +2,10 @@
 
 Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) framework.
 
+## Requirements
+
+- pnpm: [pnpm](https://pnpm.io)
+
 ## Addons
 
 - @tanstack/router: [tanstack/router](https://tanstack.com/router)
