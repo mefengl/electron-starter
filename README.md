@@ -8,6 +8,7 @@ Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) fr
 
 ## Addons
 
+- electron-trpc: [electron-trpc](https://github.com/jsonnull/electron-trpc)
 - @tanstack/router: [tanstack/router](https://tanstack.com/router)
 - shadcn/ui: [shadcn/ui](https://ui.shadcn.com)
 - tailwindcss
