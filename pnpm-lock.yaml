@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@electron-toolkit/preload':
         specifier: ^3.0.1
-        version: 3.0.1(electron@32.0.2)
+        version: 3.0.1(electron@32.1.0)
       '@electron-toolkit/utils':
         specifier: ^3.0.0
-        version: 3.0.0(electron@32.0.2)
+        version: 3.0.0(electron@32.1.0)
       '@radix-ui/react-icons':
         specifier: ^1.3.0
         version: 1.3.0(react@18.3.1)
@@ -21,8 +21,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(@types/react@18.3.5)(react@18.3.1)
       '@tanstack/react-router':
-        specifier: ^1.56.5
-        version: 1.56.5(@tanstack/router-generator@1.57.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.57.13
+        version: 1.57.13(@tanstack/router-generator@1.57.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -34,11 +34,11 @@ importers:
         version: 2.5.2
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.10)
+        version: 1.0.7(tailwindcss@3.4.11)
     devDependencies:
       '@antfu/eslint-config':
-        specifier: ^3.5.0
-        version: 3.5.0(@typescript-eslint/utils@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(@vue/compiler-sfc@3.5.0)(eslint-plugin-react-hooks@4.6.2(eslint@9.10.0(jiti@1.21.6)))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
+        specifier: ^3.6.0
+        version: 3.6.0(@typescript-eslint/utils@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(@vue/compiler-sfc@3.5.0)(eslint-plugin-react-hooks@4.6.2(eslint@9.10.0(jiti@1.21.6)))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
       '@electron-toolkit/tsconfig':
         specifier: ^1.0.1
         version: 1.0.1(@types/node@22.5.4)
@@ -46,11 +46,11 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0
       '@tanstack/router-devtools':
-        specifier: ^1.56.5
-        version: 1.56.5(@tanstack/react-router@1.56.5(@tanstack/router-generator@1.57.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.57.13
+        version: 1.57.13(@tanstack/react-router@1.57.13(@tanstack/router-generator@1.57.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/router-plugin':
-        specifier: ^1.57.1
-        version: 1.57.9(vite@5.4.3(@types/node@22.5.4))
+        specifier: ^1.57.13
+        version: 1.57.13(vite@5.4.4(@types/node@22.5.4))
       '@types/node':
         specifier: ^22.5.4
         version: 22.5.4
@@ -62,19 +62,19 @@ importers:
         version: 18.3.0
       '@vitejs/plugin-react':
         specifier: ^4.3.1
-        version: 4.3.1(vite@5.4.3(@types/node@22.5.4))
+        version: 4.3.1(vite@5.4.4(@types/node@22.5.4))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.45)
       electron:
-        specifier: ^32.0.2
-        version: 32.0.2
+        specifier: ^32.1.0
+        version: 32.1.0
       electron-builder:
         specifier: ^25.0.5
         version: 25.0.5(electron-builder-squirrel-windows@25.0.5(dmg-builder@25.0.5))
       electron-vite:
         specifier: ^2.3.0
-        version: 2.3.0(vite@5.4.3(@types/node@22.5.4))
+        version: 2.3.0(vite@5.4.4(@types/node@22.5.4))
       eslint:
         specifier: ^9.10.0
         version: 9.10.0(jiti@1.21.6)
@@ -86,7 +86,7 @@ importers:
         version: 4.6.2(eslint@9.10.0(jiti@1.21.6))
       eslint-plugin-tailwindcss:
         specifier: ^3.17.4
-        version: 3.17.4(tailwindcss@3.4.10)
+        version: 3.17.4(tailwindcss@3.4.11)
       postcss:
         specifier: ^8.4.45
         version: 8.4.45
@@ -97,14 +97,14 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: ^3.4.10
-        version: 3.4.10
+        specifier: ^3.4.11
+        version: 3.4.11
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
       vite:
-        specifier: ^5.4.3
-        version: 5.4.3(@types/node@22.5.4)
+        specifier: ^5.4.4
+        version: 5.4.4(@types/node@22.5.4)
 
 packages:
 
@@ -119,8 +119,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@antfu/eslint-config@3.5.0':
-    resolution: {integrity: sha512-1Jn3iMBiz/OtE64+JFkJz0/NbI1RYPeZOEM/lTkEl3m1AFO+4Yuxp0rpUnRUzpz5OjldkWzgeVwaGb4uZfmaOA==}
+  '@antfu/eslint-config@3.6.0':
+    resolution: {integrity: sha512-37gp57en8gaLllXmpyOMOpAjC75DoOH+8iX7WZqkeOW4oVgI3qtw9Ay1lvbzliRR3a6doBiWMWFXHyX8LTa9Tg==}
     hasBin: true
     peerDependencies:
       '@eslint-react/eslint-plugin': ^1.5.8
@@ -849,16 +849,16 @@ packages:
     resolution: {integrity: sha512-4BAffykYOgO+5nzBWYwE3W90sBgLJoUPRWWcL8wlyiM8IB8ipJz3UMJ9KXQd1RKQXpKp8Tutn80HZtWsu2u76w==}
     engines: {node: '>=10'}
 
-  '@tanstack/history@1.51.7':
-    resolution: {integrity: sha512-y25aH3NDbdUp5Gk6Fnb77LsHTT2JrzVgI44ZiyEOf8i2j14Ma3oJ80fCw7rT/iV4xa4IN2Yex9flAsZQdh1i4A==}
+  '@tanstack/history@1.57.6':
+    resolution: {integrity: sha512-ppAJbnUaHdHmccVmplcd1ivX4GMPHxhStSquuuz0TSAEPEpz0iOVBur4iKfvIuMKm24c40nhvaEwZbKGVfbrGg==}
     engines: {node: '>=12'}
 
-  '@tanstack/react-router@1.56.5':
-    resolution: {integrity: sha512-qCmBgplLlqOSW1eLlKglTTFMv9zlsL8CJZWN0J0+YLkHSmbsdTKQhfA4bFveXL+EwjrJgFT+/GgIfB8fZEp8PQ==}
+  '@tanstack/react-router@1.57.13':
+    resolution: {integrity: sha512-VJRRufwu0YIZNmWZ/rWMOGOSxwxdiULO8hx2xCOHzD/Fy/E7hMWwYX/VM2VcN8ug6GkYIFh7uk1+Gjcc2gyrhg==}
     engines: {node: '>=12'}
     peerDependencies:
       '@tanstack/react-generator': '*'
-      '@tanstack/router-generator': 1.56.4
+      '@tanstack/router-generator': 1.57.13
       react: '>=18'
       react-dom: '>=18'
     peerDependenciesMeta:
@@ -871,23 +871,23 @@ packages:
       react: ^17.0.0 || ^18.0.0
       react-dom: ^17.0.0 || ^18.0.0
 
-  '@tanstack/router-devtools@1.56.5':
-    resolution: {integrity: sha512-/yI0St7ldXxajH5BmKiO2FsrD1wQ1Z4ZxLLG1RKeIJsVBz5zWWvlI7tlv5EpBVdVgiGQPrd2turx4gUKFLVP+g==}
+  '@tanstack/router-devtools@1.57.13':
+    resolution: {integrity: sha512-o3C7z7tQfUE9uekGqnMFLkB0r+JsxvOcEZilJPvnuzR2CpaHfLhCJyqfgRTsZrv5y0dxsotLD7w+eWzWv9iiqQ==}
     engines: {node: '>=12'}
     peerDependencies:
-      '@tanstack/react-router': ^1.56.5
+      '@tanstack/react-router': ^1.57.13
       react: '>=18'
       react-dom: '>=18'
 
-  '@tanstack/router-generator@1.57.9':
-    resolution: {integrity: sha512-zDkyb6JLkvHc/Hhu9F+Gn4JzUR7ZgtH1rbcI2H14JG8IjW1ahtko/r0a2Ev+G4kNqhZF0a5sSgh/tMQOIPZyjg==}
+  '@tanstack/router-generator@1.57.13':
+    resolution: {integrity: sha512-DuoXwQOJHq1cCShhMnes6OaiFmpajMcah62/h40ZobbBtP5IuJFALvdtfAC26xfi2XmDA5/DwHwgdz9AHdsQCw==}
     engines: {node: '>=12'}
 
-  '@tanstack/router-plugin@1.57.9':
-    resolution: {integrity: sha512-hMQeZE9TXy10ZNbOkYJDtx07neJUaebTAU/Ep7wAV/uVvgkuGcsjHfXU1HyNfSJV/9Iivrua7ozIJzW2ep+V/A==}
+  '@tanstack/router-plugin@1.57.13':
+    resolution: {integrity: sha512-KrMZFd7YcFB6GJ+8ZD8b4QKw7INayYrWZnXZGVUslc6Mpw3DDKvXSQx1SPC0ggwN7drX2qFs+U0qVPIa1dpV4A==}
     engines: {node: '>=12'}
     peerDependencies:
-      '@rsbuild/core': '>=1.0.1-rc.5'
+      '@rsbuild/core': '>=1.0.2'
       vite: '>=5.0.0'
       webpack: '>=5.92.0'
     peerDependenciesMeta:
@@ -1611,8 +1611,8 @@ packages:
       '@swc/core':
         optional: true
 
-  electron@32.0.2:
-    resolution: {integrity: sha512-nmZblq8wW3HZ17MAyaUuiMI9Mb0Cgc7UR3To85h/rVopbfyF5s34NxtK4gvyRfYPxpDGP4k+HoQIPniPPrdE3w==}
+  electron@32.1.0:
+    resolution: {integrity: sha512-4etE3K6vPUkHihf7nvawngbB5+jLuUJgZh31f9ki1Gfveo0qwNDkLv/doabw+4zFFWKUXI+uFUpyOpL5+RwS+Q==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -1708,8 +1708,8 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-antfu@2.5.0:
-    resolution: {integrity: sha512-YLIWE22/ERe6Jpqt6bJdvALw8SWvf4x2DQjvVpRvAv8LrdHbwWckkoueAf8oQFgSOLsL1R/axa+exjpubPp0fw==}
+  eslint-plugin-antfu@2.6.0:
+    resolution: {integrity: sha512-4dz0VgWGpZ6jUSEUPSI6OGFqBc+P8c7zFFXht5t+YwzIvBsruqVX7Hjl3I8KNNEyJmA4fL3+GIc+EWU1woTp1A==}
     peerDependencies:
       eslint: '*'
 
@@ -3216,8 +3216,8 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  tailwindcss@3.4.10:
-    resolution: {integrity: sha512-KWZkVPm7yJRhdu4SRSl9d4AK2wM3a50UsvgHZO7xY77NQr2V+fIrEuoDGQcbvswWvFGbS2f6e+jC/6WJm1Dl0w==}
+  tailwindcss@3.4.11:
+    resolution: {integrity: sha512-qhEuBcLemjSJk5ajccN9xJFtM/h0AVCPaA6C92jNP+M2J8kX+eMJHI7R2HFKUvvAsMpcfLILMCFYSeDwpMmlUg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3384,8 +3384,8 @@ packages:
     resolution: {integrity: sha512-veufcmxri4e3XSrT0xwfUR7kguIkaxBeosDg00yDWhk49wdwkSUrvvsm7nc75e1PUyvIeZj6nS8VQRYz2/S4Xg==}
     engines: {node: '>=0.6.0'}
 
-  vite@5.4.3:
-    resolution: {integrity: sha512-IH+nl64eq9lJjFqU+/yrRnrHPVTlgy42/+IzbOdaFDVlyLgI/wDlf+FCobXLX1cT0X5+7LMyH1mIy2xJdLfo8Q==}
+  vite@5.4.4:
+    resolution: {integrity: sha512-RHFCkULitycHVTtelJ6jQLd+KSAAzOgEYorV32R2q++M6COBjKJR6BxqClwp5sf0XaBDjVMuJ9wnNfyAJwjMkA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -3517,7 +3517,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@antfu/eslint-config@3.5.0(@typescript-eslint/utils@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(@vue/compiler-sfc@3.5.0)(eslint-plugin-react-hooks@4.6.2(eslint@9.10.0(jiti@1.21.6)))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)':
+  '@antfu/eslint-config@3.6.0(@typescript-eslint/utils@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(@vue/compiler-sfc@3.5.0)(eslint-plugin-react-hooks@4.6.2(eslint@9.10.0(jiti@1.21.6)))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)':
     dependencies:
       '@antfu/install-pkg': 0.4.1
       '@clack/prompts': 0.7.0
@@ -3531,7 +3531,7 @@ snapshots:
       eslint-config-flat-gitignore: 0.3.0(eslint@9.10.0(jiti@1.21.6))
       eslint-flat-config-utils: 0.4.0
       eslint-merge-processors: 0.1.0(eslint@9.10.0(jiti@1.21.6))
-      eslint-plugin-antfu: 2.5.0(eslint@9.10.0(jiti@1.21.6))
+      eslint-plugin-antfu: 2.6.0(eslint@9.10.0(jiti@1.21.6))
       eslint-plugin-command: 0.2.4(eslint@9.10.0(jiti@1.21.6))
       eslint-plugin-import-x: 4.2.1(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
       eslint-plugin-jsdoc: 50.2.2(eslint@9.10.0(jiti@1.21.6))
@@ -3727,17 +3727,17 @@ snapshots:
       ajv: 6.12.6
       ajv-keywords: 3.5.2(ajv@6.12.6)
 
-  '@electron-toolkit/preload@3.0.1(electron@32.0.2)':
+  '@electron-toolkit/preload@3.0.1(electron@32.1.0)':
     dependencies:
-      electron: 32.0.2
+      electron: 32.1.0
 
   '@electron-toolkit/tsconfig@1.0.1(@types/node@22.5.4)':
     dependencies:
       '@types/node': 22.5.4
 
-  '@electron-toolkit/utils@3.0.0(electron@32.0.2)':
+  '@electron-toolkit/utils@3.0.0(electron@32.1.0)':
     dependencies:
-      electron: 32.0.2
+      electron: 32.1.0
 
   '@electron/asar@3.2.10':
     dependencies:
@@ -4152,7 +4152,7 @@ snapshots:
 
   '@stylistic/eslint-plugin@2.8.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)':
     dependencies:
-      '@typescript-eslint/utils': 8.4.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
+      '@typescript-eslint/utils': 8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
       eslint: 9.10.0(jiti@1.21.6)
       eslint-visitor-keys: 4.0.0
       espree: 10.1.0
@@ -4166,13 +4166,13 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@tanstack/history@1.51.7': {}
+  '@tanstack/history@1.57.6': {}
 
-  '@tanstack/react-router@1.56.5(@tanstack/router-generator@1.57.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@tanstack/react-router@1.57.13(@tanstack/router-generator@1.57.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@tanstack/history': 1.51.7
+      '@tanstack/history': 1.57.6
       '@tanstack/react-store': 0.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@tanstack/router-generator': 1.57.9
+      '@tanstack/router-generator': 1.57.13
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       tiny-invariant: 1.3.3
@@ -4185,9 +4185,9 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       use-sync-external-store: 1.2.2(react@18.3.1)
 
-  '@tanstack/router-devtools@1.56.5(@tanstack/react-router@1.56.5(@tanstack/router-generator@1.57.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@tanstack/router-devtools@1.57.13(@tanstack/react-router@1.57.13(@tanstack/router-generator@1.57.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@tanstack/react-router': 1.56.5(@tanstack/router-generator@1.57.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@tanstack/react-router': 1.57.13(@tanstack/router-generator@1.57.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx: 2.1.1
       goober: 2.1.14(csstype@3.1.3)
       react: 18.3.1
@@ -4195,14 +4195,14 @@ snapshots:
     transitivePeerDependencies:
       - csstype
 
-  '@tanstack/router-generator@1.57.9':
+  '@tanstack/router-generator@1.57.13':
     dependencies:
       '@tanstack/virtual-file-routes': 1.56.0
       prettier: 3.3.3
       tsx: 4.19.0
       zod: 3.23.8
 
-  '@tanstack/router-plugin@1.57.9(vite@5.4.3(@types/node@22.5.4))':
+  '@tanstack/router-plugin@1.57.13(vite@5.4.4(@types/node@22.5.4))':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/generator': 7.25.6
@@ -4212,7 +4212,7 @@ snapshots:
       '@babel/template': 7.25.0
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
-      '@tanstack/router-generator': 1.57.9
+      '@tanstack/router-generator': 1.57.13
       '@tanstack/virtual-file-routes': 1.56.0
       '@types/babel__core': 7.20.5
       '@types/babel__generator': 7.6.8
@@ -4223,7 +4223,7 @@ snapshots:
       unplugin: 1.12.3
       zod: 3.23.8
     optionalDependencies:
-      vite: 5.4.3(@types/node@22.5.4)
+      vite: 5.4.4(@types/node@22.5.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -4443,14 +4443,14 @@ snapshots:
       '@typescript-eslint/types': 8.5.0
       eslint-visitor-keys: 3.4.3
 
-  '@vitejs/plugin-react@4.3.1(vite@5.4.3(@types/node@22.5.4))':
+  '@vitejs/plugin-react@4.3.1(vite@5.4.4(@types/node@22.5.4))':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.25.2)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.25.2)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.3(@types/node@22.5.4)
+      vite: 5.4.4(@types/node@22.5.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -5094,7 +5094,7 @@ snapshots:
 
   electron-to-chromium@1.5.13: {}
 
-  electron-vite@2.3.0(vite@5.4.3(@types/node@22.5.4)):
+  electron-vite@2.3.0(vite@5.4.4(@types/node@22.5.4)):
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-arrow-functions': 7.24.7(@babel/core@7.25.2)
@@ -5102,11 +5102,11 @@ snapshots:
       esbuild: 0.21.5
       magic-string: 0.30.11
       picocolors: 1.1.0
-      vite: 5.4.3(@types/node@22.5.4)
+      vite: 5.4.4(@types/node@22.5.4)
     transitivePeerDependencies:
       - supports-color
 
-  electron@32.0.2:
+  electron@32.1.0:
     dependencies:
       '@electron/get': 2.0.3
       '@types/node': 20.16.3
@@ -5243,7 +5243,7 @@ snapshots:
     dependencies:
       eslint: 9.10.0(jiti@1.21.6)
 
-  eslint-plugin-antfu@2.5.0(eslint@9.10.0(jiti@1.21.6)):
+  eslint-plugin-antfu@2.6.0(eslint@9.10.0(jiti@1.21.6)):
     dependencies:
       '@antfu/utils': 0.7.10
       eslint: 9.10.0(jiti@1.21.6)
@@ -5262,7 +5262,7 @@ snapshots:
 
   eslint-plugin-import-x@4.2.1(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2):
     dependencies:
-      '@typescript-eslint/utils': 8.4.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
+      '@typescript-eslint/utils': 8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
       debug: 4.3.6
       doctrine: 3.0.0
       eslint: 9.10.0(jiti@1.21.6)
@@ -5347,11 +5347,11 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.10):
+  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.11):
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.45
-      tailwindcss: 3.4.10
+      tailwindcss: 3.4.11
 
   eslint-plugin-toml@0.11.1(eslint@9.10.0(jiti@1.21.6)):
     dependencies:
@@ -7023,11 +7023,11 @@ snapshots:
 
   tailwind-merge@2.5.2: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@3.4.10):
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.11):
     dependencies:
-      tailwindcss: 3.4.10
+      tailwindcss: 3.4.11
 
-  tailwindcss@3.4.10:
+  tailwindcss@3.4.11:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -7215,7 +7215,7 @@ snapshots:
       extsprintf: 1.4.1
     optional: true
 
-  vite@5.4.3(@types/node@22.5.4):
+  vite@5.4.4(@types/node@22.5.4):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.45
