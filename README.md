@@ -4,15 +4,15 @@ Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) fr
 
 ## Requirements
 
-- pnpm: [pnpm](https://pnpm.io)
+- [pnpm](https://pnpm.io)
 
 ## Addons
 
-- electron-trpc: [electron-trpc](https://github.com/jsonnull/electron-trpc)
-- @tanstack/router: [tanstack/router](https://tanstack.com/router)
-- shadcn/ui: [shadcn/ui](https://ui.shadcn.com)
-- tailwindcss
-- eslint: [eslint-config](https://github.com/antfu/eslint-config)
+- [electron-trpc](https://github.com/jsonnull/electron-trpc)
+- [@tanstack/router](https://tanstack.com/router)
+- [shadcn/ui](https://ui.shadcn.com)
+- [tailwindcss](https://tailwindcss.com)
+- [eslint-config](https://github.com/antfu/eslint-config)
 
 ## Notice
 
