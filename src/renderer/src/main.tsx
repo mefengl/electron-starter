@@ -1,6 +1,12 @@
+import type { AppRouter } from '@main/api'
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createMemoryHistory, createRouter, RouterProvider } from '@tanstack/react-router'
-import React from 'react'
+import { createTRPCReact } from '@trpc/react-query'
+import { ipcLink } from 'electron-trpc/renderer'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
+import superjson from 'superjson'
 
 import './global.css'
 // Import the generated route tree
@@ -23,13 +29,32 @@ declare module '@tanstack/react-router' {
   }
 }
 
+const trpcReact = createTRPCReact<AppRouter>()
+
+function App() {
+  const [queryClient] = useState(() => new QueryClient())
+  const [trpcClient] = useState(() =>
+    trpcReact.createClient({
+      links: [ipcLink()],
+      transformer: superjson,
+    }),
+  )
+  return (
+    <trpcReact.Provider client={trpcClient} queryClient={queryClient}>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </trpcReact.Provider>
+  )
+}
+
 // Render the app
 const rootElement = document.getElementById('root')!
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <App />
     </React.StrictMode>,
   )
 }

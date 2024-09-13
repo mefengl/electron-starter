@@ -5,7 +5,11 @@ import { resolve } from 'node:path'
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()],
+    plugins: [externalizeDepsPlugin({
+      exclude: [
+        'superjson',
+      ],
+    })],
   },
   preload: {
     plugins: [externalizeDepsPlugin()],
@@ -20,6 +24,7 @@ export default defineConfig({
     ],
     resolve: {
       alias: {
+        '@main': resolve('src/main'),
         '@renderer': resolve('src/renderer/src'),
       },
     },
