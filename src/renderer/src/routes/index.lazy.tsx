@@ -9,15 +9,6 @@ export const Route = createLazyFileRoute('/')({
   component: Index,
 })
 
-function Index() {
-  return (
-    <div className="p-2">
-      <h3>Welcome Home!</h3>
-      <HelloTRPC />
-    </div>
-  )
-}
-
 function HelloTRPC() {
   const { data: hello } = trpcReact.greeting.useQuery({ name: 'tRPC' })
   trpcReact.onGreeting.useSubscription(undefined, {
@@ -32,4 +23,13 @@ function HelloTRPC() {
   }
 
   return <div data-testid="greeting">{hello}</div>
+}
+
+function Index() {
+  return (
+    <div className="p-2">
+      <h3>Welcome Home!</h3>
+      <HelloTRPC />
+    </div>
+  )
 }
