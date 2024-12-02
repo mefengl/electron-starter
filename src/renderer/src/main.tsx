@@ -6,7 +6,6 @@ import { createTRPCReact } from '@trpc/react-query'
 import { ipcLink } from 'electron-trpc/renderer'
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import superjson from 'superjson'
 
 import './global.css'
 // Import the generated route tree
@@ -36,7 +35,6 @@ function App() {
   const [trpcClient] = useState(() =>
     trpcReact.createClient({
       links: [ipcLink()],
-      transformer: superjson,
     }),
   )
   return (

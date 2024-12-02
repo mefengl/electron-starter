@@ -1,14 +1,12 @@
 import { initTRPC } from '@trpc/server'
 import { observable } from '@trpc/server/observable'
 import { EventEmitter } from 'node:events'
-import superjson from 'superjson'
 import z from 'zod'
 
 const ee = new EventEmitter()
 
 const t = initTRPC.create({
   isServer: true,
-  transformer: superjson,
 })
 
 export const router = t.router({
