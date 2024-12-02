@@ -19,17 +19,17 @@ function Index() {
 }
 
 function HelloTRPC() {
-  const { data } = trpcReact.greeting.useQuery({ name: 'tRPC' })
-  trpcReact.subscription.useSubscription(undefined, {
-    onData: (data) => {
+  const { data: hello } = trpcReact.greeting.useQuery({ name: 'tRPC' })
+  trpcReact.onGreeting.useSubscription(undefined, {
+    onData: (hello) => {
       // eslint-disable-next-line no-console
-      console.log(data)
+      console.log(hello)
     },
   })
 
-  if (!data) {
+  if (!hello) {
     return null
   }
 
-  return <div data-testid="greeting">{data.text}</div>
+  return <div data-testid="greeting">{hello}</div>
 }

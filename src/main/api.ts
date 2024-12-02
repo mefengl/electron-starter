@@ -9,19 +9,19 @@ const t = initTRPC.create({
   isServer: true,
 })
 
+// Uncomment below eslint comments to temporarily turn off object sorting
+// /* eslint-disable perfectionist/sort-objects */
 export const router = t.router({
   greeting: t.procedure.input(z.object({ name: z.string() })).query((req) => {
     const { input } = req
 
     ee.emit('greeting', `Greeted ${input.name}`)
-    return {
-      text: `Hello ${input.name}` as const,
-    }
+    return `Hello ${input.name}` as const
   }),
-  subscription: t.procedure.subscription(() => {
+  onGreeting: t.procedure.subscription(() => {
     return observable((emit) => {
-      function onGreet(text: string) {
-        emit.next({ text })
+      function onGreet(hello: string) {
+        emit.next(hello)
       }
 
       ee.on('greeting', onGreet)
@@ -32,5 +32,6 @@ export const router = t.router({
     })
   }),
 })
+// /* eslint-enable perfectionist/sort-objects */
 
 export type AppRouter = typeof router
