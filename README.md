@@ -4,7 +4,7 @@ Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) fr
 
 ## Requirements
 
-- [pnpm](https://pnpm.io)
+- [bun](https://bun.sh/)
 
 ## Addons
 
@@ -33,13 +33,13 @@ The automatic import of UI components with aliases is not functioning correctly.
 ### Install
 
 ```bash
-npm install
+bun install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+bun dev
 ```
 
 ### Version Bumping
@@ -50,11 +50,11 @@ Run `bun bump` to bump version in cli.
 
 ```bash
 # For windows
-$ npm run build:win
+bun build:win
 
 # For macOS
-$ npm run build:mac
+bun build:mac
 
 # For Linux
-$ npm run build:linux
+bun build:linux
 ```
