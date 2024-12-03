@@ -14,6 +14,10 @@ Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) fr
 - [tailwindcss](https://tailwindcss.com)
 - [eslint-config](https://github.com/antfu/eslint-config)
 
+dev:
+
+- [bumpp](https://github.com/antfu-collective/bumpp): See [Version Bumping](#version-bumping)
+
 ## Notice
 
 The automatic import of UI components with aliases is not functioning correctly. For instance, instead of getting `import { Button } from "@renderer/components/ui/button";`, you may receive `import { Button } from "./components/ui/button";`.
@@ -37,6 +41,10 @@ npm install
 ```bash
 npm run dev
 ```
+
+### Version Bumping
+
+Run `bun bump` to bump version in cli.
 
 ### Build
 
