@@ -1,5 +1,6 @@
 {
   "name": "electron-starter",
+  "type": "module",
   "version": "0.0.0",
   "description": "An Electron application with React and TypeScript",
   "author": "example.com",

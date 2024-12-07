@@ -1,7 +1,7 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import { app, BrowserWindow, ipcMain, shell } from 'electron'
 import { createIPCHandler } from 'electron-trpc/main'
-import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import icon from '../../resources/icon.png?asset'
 import { router } from './api'
@@ -15,7 +15,7 @@ function createWindow(): void {
     width: 900,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
-      preload: join(__dirname, '../preload/index.js'),
+      preload: fileURLToPath(new URL('../preload/index.mjs', import.meta.url)),
       sandbox: false,
     },
   })
@@ -36,7 +36,7 @@ function createWindow(): void {
   if (is.dev && process.env.ELECTRON_RENDERER_URL)
     mainWindow.loadURL(process.env.ELECTRON_RENDERER_URL)
   else
-    mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
+    mainWindow.loadFile(fileURLToPath(new URL('../renderer/index.html', import.meta.url)))
 }
 
 // This method will be called when Electron has finished
