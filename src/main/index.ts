@@ -1,10 +1,14 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import { app, BrowserWindow, ipcMain, shell } from 'electron'
 import { createIPCHandler } from 'electron-trpc/main'
+import unhandled from 'electron-unhandled'
 import { fileURLToPath } from 'node:url'
 
 import icon from '../../resources/icon.png?asset'
 import { router } from './api'
+
+// catch unhandled errors and exceptions
+unhandled()
 
 function createWindow(): void {
   // Create the browser window.

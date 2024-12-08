@@ -4,12 +4,16 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createMemoryHistory, createRouter, RouterProvider } from '@tanstack/react-router'
 import { createTRPCReact } from '@trpc/react-query'
 import { ipcLink } from 'electron-trpc/renderer'
+import unhandled from 'electron-unhandled'
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './global.css'
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
+
+// catch unhandled errors and exceptions
+unhandled()
 
 // Create a memory history instance to initialize the router so it doesn't break when compiled:
 const memoryHistory = createMemoryHistory({
