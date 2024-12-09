@@ -1,7 +1,9 @@
 import { electronAPI } from '@electron-toolkit/preload'
 import { contextBridge } from 'electron'
+import { exposeConf } from 'electron-conf/preload'
 import { exposeElectronTRPC } from 'electron-trpc/preload'
 
+exposeConf()
 exposeElectronTRPC()
 
 // Custom APIs for renderer

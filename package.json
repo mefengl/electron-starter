@@ -34,6 +34,7 @@
     "@trpc/server": "^10.45.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "electron-conf": "^1.2.1",
     "electron-trpc": "1.0.0-alpha.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
