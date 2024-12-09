@@ -1,10 +1,15 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import { app, BrowserWindow, ipcMain, shell } from 'electron'
+import log from 'electron-log/main'
 import { createIPCHandler } from 'electron-trpc/main'
 import { fileURLToPath } from 'node:url'
 
 import icon from '../../resources/icon.png?asset'
 import { router } from './api'
+
+// Optional, initialize the logger for any renderer process
+log.initialize()
+log.info('Log from the main process')
 
 function createWindow(): void {
   // Create the browser window.

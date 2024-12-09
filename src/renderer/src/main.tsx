@@ -3,6 +3,7 @@ import type { AppRouter } from '@main/api'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createMemoryHistory, createRouter, RouterProvider } from '@tanstack/react-router'
 import { createTRPCReact } from '@trpc/react-query'
+import log from 'electron-log/renderer'
 import { ipcLink } from 'electron-trpc/renderer'
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
@@ -10,6 +11,8 @@ import ReactDOM from 'react-dom/client'
 import './global.css'
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
+
+log.info('Log from the renderer process')
 
 // Create a memory history instance to initialize the router so it doesn't break when compiled:
 const memoryHistory = createMemoryHistory({
