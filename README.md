@@ -9,13 +9,15 @@ Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) fr
 ## Addons
 
 - [electron-trpc](https://github.com/jsonnull/electron-trpc)
+- [electron-log](https://github.com/megahertz/electron-log)
+- [electron-conf](https://github.com/alex8088/electron-conf)
 - [@tanstack/router](https://tanstack.com/router)
 - [shadcn/ui](https://ui.shadcn.com)
 - [tailwindcss](https://tailwindcss.com)
-- [eslint-config](https://github.com/antfu/eslint-config)
 
 dev:
 
+- [eslint-config](https://github.com/antfu/eslint-config)
 - [bumpp](https://github.com/antfu-collective/bumpp): See [Version Bumping](#version-bumping)
 
 ## Notice
