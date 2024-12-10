@@ -41,22 +41,22 @@ bun install
 ### Development
 
 ```bash
-bun dev
+bun run dev
 ```
 
 ### Version Bumping
 
-Run `bun bump` to bump version in cli.
+Run `bun run bump` to bump version in cli.
 
 ### Build
 
 ```bash
 # For windows
-bun build:win
+bun run build:win
 
 # For macOS
-bun build:mac
+bun run build:mac
 
 # For Linux
-bun build:linux
+bun run build:linux
 ```
