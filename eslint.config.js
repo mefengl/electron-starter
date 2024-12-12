@@ -5,13 +5,6 @@ import perfectionist from 'eslint-plugin-perfectionist'
 const compat = new FlatCompat()
 
 export default antfu(
-  {
-    rules: {
-      'tailwindcss/migration-from-tailwind-2': 'off',
-      'tailwindcss/no-custom-classname': 'off',
-    },
-  },
-
   ...compat.config({
     extends: [
       'plugin:tailwindcss/recommended',
@@ -21,6 +14,12 @@ export default antfu(
       'tsconfig.*',
     ],
   }),
+  {
+    rules: {
+      'tailwindcss/migration-from-tailwind-2': 'off',
+      'tailwindcss/no-custom-classname': 'off',
+    },
+  },
 
   // perfectionist
   {
