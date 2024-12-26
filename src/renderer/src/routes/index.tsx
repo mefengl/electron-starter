@@ -1,11 +1,11 @@
 import type { AppRouter } from '@main/api'
 
-import { createLazyFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { createTRPCReact } from '@trpc/react-query'
 
 const trpcReact = createTRPCReact<AppRouter>()
 
-export const Route = createLazyFileRoute('/')({
+export const Route = createFileRoute('/')({
   component: Index,
 })
 
