@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url'
 
 import icon from '../../resources/icon.png?asset'
 import { router } from './api'
+import { initAutoUpdater } from './updater'
 
 // Optional, initialize the Conf store for any renderer process
 const conf = new Conf()
@@ -68,6 +69,9 @@ app.whenReady().then(() => {
   ipcMain.on('ping', () => console.log('pong'))
 
   createWindow()
+
+  // Initialize auto updater
+  initAutoUpdater()
 
   app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the
