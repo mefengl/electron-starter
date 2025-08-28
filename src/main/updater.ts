@@ -1,5 +1,5 @@
-import pkg from 'electron-updater'
 import log from 'electron-log/main'
+import pkg from 'electron-updater'
 
 const { autoUpdater } = pkg
 
@@ -33,9 +33,9 @@ export function initAutoUpdater() {
   })
 
   autoUpdater.on('download-progress', (progressObj) => {
-    let log_message = 'Download speed: ' + progressObj.bytesPerSecond
-    log_message = log_message + ' - Downloaded ' + progressObj.percent + '%'
-    log_message = log_message + ' (' + progressObj.transferred + '/' + progressObj.total + ')'
+    let log_message = `Download speed: ${progressObj.bytesPerSecond}`
+    log_message = `${log_message} - Downloaded ${progressObj.percent}%`
+    log_message = `${log_message} (${progressObj.transferred}/${progressObj.total})`
     log.info(log_message)
   })
 

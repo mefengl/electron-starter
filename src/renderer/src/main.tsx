@@ -8,9 +8,9 @@ import { ipcLink } from 'electron-trpc/renderer'
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 
-import './global.css'
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
+import './globals.css'
 
 log.info('Log from the renderer process')
 

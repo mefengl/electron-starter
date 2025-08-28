@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
@@ -12,6 +13,7 @@ export default defineConfig({
   },
   renderer: {
     plugins: [
+      tailwindcss(),
       TanStackRouterVite({
         generatedRouteTree: './src/renderer/src/routeTree.gen.ts',
         routesDirectory: './src/renderer/src/routes',
