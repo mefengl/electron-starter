@@ -1,5 +1,7 @@
-import { autoUpdater } from 'electron-updater'
+import pkg from 'electron-updater'
 import log from 'electron-log/main'
+
+const { autoUpdater } = pkg
 
 export function initAutoUpdater() {
   // Configure logger
