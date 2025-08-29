@@ -9,8 +9,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
-    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck:node": "tsgo --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsgo --noEmit -p tsconfig.web.json --composite false",
     "typecheck": "bun run typecheck:node && bun run typecheck:web",
     "start": "electron-vite preview",
     "dev": "electron-vite dev",
@@ -53,6 +53,7 @@
     "@types/node": "^22.10.6",
     "@types/react": "^19.0.7",
     "@types/react-dom": "19.0.2",
+    "@typescript/native-preview": "7.0.0-dev.20250828.1",
     "@vitejs/plugin-react-oxc": "^0.4.1",
     "bumpp": "^9.10.1",
     "electron": "^37.4.0",
