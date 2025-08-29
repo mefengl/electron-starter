@@ -39,6 +39,7 @@ function App() {
     }),
   )
   return (
+    // eslint-disable-next-line react/no-context-provider
     <trpcReact.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
