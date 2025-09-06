@@ -1,8 +1,8 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
+import { RPCHandler } from '@orpc/server/message-port'
 import { app, BrowserWindow, ipcMain, shell } from 'electron'
 import { Conf } from 'electron-conf/main'
 import log from 'electron-log/main'
-import { createIPCHandler } from 'electron-trpc/main'
 import { fileURLToPath } from 'node:url'
 
 import icon from '../../resources/icon.png?asset'
@@ -30,8 +30,6 @@ function createWindow(): void {
       sandbox: false,
     },
   })
-
-  createIPCHandler({ router, windows: [mainWindow] })
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
@@ -64,10 +62,6 @@ app.whenReady().then(() => {
     optimizer.watchWindowShortcuts(window)
   })
 
-  // IPC test
-  // eslint-disable-next-line no-console
-  ipcMain.on('ping', () => console.log('pong'))
-
   createWindow()
 
   // Initialize auto updater
@@ -91,3 +85,10 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
+// upgrade MessagePort to oRPC server
+const handler = new RPCHandler(router)
+ipcMain.on('start-orpc-server', (event) => {
+  const [serverPort] = event.ports
+  handler.upgrade(serverPort)
+  serverPort.start()
+})

@@ -1,7 +1,9 @@
-import { createRootRoute, Link, Outlet, ScrollRestoration } from '@tanstack/react-router'
+import type { QueryClient } from '@tanstack/react-query'
+
+import { createRootRouteWithContext, Link, Outlet, ScrollRestoration } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   component: () => (
     <>
       <div className="flex gap-2 p-2">
@@ -16,7 +18,7 @@ export const Route = createRootRoute({
       <hr />
       <Outlet />
       <ScrollRestoration />
-      <TanStackRouterDevtools />
+      {import.meta.env.DEV && <TanStackRouterDevtools />}
     </>
   ),
 })

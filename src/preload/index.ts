@@ -1,10 +1,15 @@
 import { electronAPI } from '@electron-toolkit/preload'
-import { contextBridge } from 'electron'
+import { contextBridge, ipcRenderer } from 'electron'
 import { exposeConf } from 'electron-conf/preload'
-import { exposeElectronTRPC } from 'electron-trpc/preload'
 
 exposeConf()
-exposeElectronTRPC()
+// forward port to main
+window.addEventListener('message', (event) => {
+  if (event.data === 'start-orpc-client') {
+    const [serverPort] = event.ports
+    ipcRenderer.postMessage('start-orpc-server', null, [serverPort])
+  }
+})
 
 // Custom APIs for renderer
 const api = {}

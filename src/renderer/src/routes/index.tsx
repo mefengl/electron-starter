@@ -1,35 +1,36 @@
-import type { AppRouter } from '@main/api'
-
+import { q } from '@renderer/lib/orpc'
+import { useQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
-import { createTRPCReact } from '@trpc/react-query'
-
-const trpcReact = createTRPCReact<AppRouter>()
 
 export const Route = createFileRoute('/')({
   component: Index,
+  loader: ({ context }) =>
+    context.queryClient.ensureQueryData(
+      q.greeting.queryOptions({ input: { name: 'oRPC' } }),
+    ),
 })
 
-function HelloTRPC() {
-  const { data: hello } = trpcReact.greeting.useQuery({ name: 'tRPC' })
-  trpcReact.onGreeting.useSubscription(undefined, {
-    onData: (hello) => {
-      // eslint-disable-next-line no-console
-      console.log(hello)
-    },
-  })
+function HelloORPC() {
+  const { data: hello } = useQuery(q.greeting.queryOptions({ input: { name: 'oRPC' } }))
 
-  if (!hello) {
+  // live subscription (logs latest message)
+  const { data: live } = useQuery(q.onGreeting.experimental_liveOptions({ retry: true }))
+
+  if (!hello)
     return null
-  }
-
-  return <div data-testid="greeting">{hello}</div>
+  return (
+    <div>
+      <div data-testid="greeting">{hello}</div>
+      {live && <div data-testid="greeting-live">{live}</div>}
+    </div>
+  )
 }
 
 function Index() {
   return (
     <div className="p-2">
       <h3>Welcome Home!</h3>
-      <HelloTRPC />
+      <HelloORPC />
     </div>
   )
 }

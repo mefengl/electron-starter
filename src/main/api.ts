@@ -1,37 +1,25 @@
-import { initTRPC } from '@trpc/server'
-import { observable } from '@trpc/server/observable'
-import { EventEmitter } from 'node:events'
-import z from 'zod'
+import { eventIterator, EventPublisher, os } from '@orpc/server'
+import { z } from 'zod'
 
-const ee = new EventEmitter()
+const publisher = new EventPublisher<Record<'greeting', string>>()
 
-const t = initTRPC.create({
-  isServer: true,
-})
-
-// Uncomment below eslint comments to temporarily turn off object sorting
 // /* eslint-disable perfectionist/sort-objects */
-export const router = t.router({
-  greeting: t.procedure.input(z.object({ name: z.string() })).query((req) => {
-    const { input } = req
+export const router = {
+  greeting: os
+    .input(z.object({ name: z.string() }))
+    .handler(({ input }) => {
+      const message = `Hello ${input.name}` as const
+      publisher.publish('greeting', `Greeted ${input.name}`)
+      return message
+    }),
 
-    ee.emit('greeting', `Greeted ${input.name}`)
-    return `Hello ${input.name}` as const
+  // stream
+  onGreeting: os.output(eventIterator(z.string())).handler(async function* ({ signal }) {
+    for await (const msg of publisher.subscribe('greeting', { signal })) {
+      yield msg
+    }
   }),
-  onGreeting: t.procedure.subscription(() => {
-    return observable((emit) => {
-      function onGreet(hello: string) {
-        emit.next(hello)
-      }
-
-      ee.on('greeting', onGreet)
-
-      return () => {
-        ee.off('greeting', onGreet)
-      }
-    })
-  }),
-})
+}
 // /* eslint-enable perfectionist/sort-objects */
 
 export type AppRouter = typeof router
