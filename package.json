@@ -17,7 +17,7 @@
     "bump": "bumpp -y -q",
     "build": "bun run typecheck && electron-vite build",
     "postinstall": "electron-builder install-app-deps",
-    "prepare": "[ \"$CI\" = \"true\" ] || lefthook install",
+    "prepare": "[ -n \"$CI\" ] || lefthook install",
     "build:unpack": "bun run build && electron-builder --dir",
     "build:win": "bun run build && electron-builder --win",
     "build:mac": "bun run build && electron-builder --mac",
