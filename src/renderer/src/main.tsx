@@ -22,6 +22,7 @@ const router = createRouter({
   defaultPreload: 'intent',
   history: hashHistory,
   routeTree,
+  scrollRestoration: true,
 })
 
 // Register the router instance for type safety
