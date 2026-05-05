@@ -1,9 +1,9 @@
+import { fileURLToPath } from 'node:url'
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import { RPCHandler } from '@orpc/server/message-port'
 import { app, BrowserWindow, ipcMain, shell } from 'electron'
 import { Conf } from 'electron-conf/main'
 import log from 'electron-log/main'
-import { fileURLToPath } from 'node:url'
 
 import icon from '../../resources/icon.png?asset'
 import { router } from './api'

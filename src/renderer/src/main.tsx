@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createHashHistory, createRouter, RouterProvider } from '@tanstack/react-router'
 import log from 'electron-log/renderer'
-import React from 'react'
+import * as React from 'react'
 import ReactDOM from 'react-dom/client'
 
 // Import the generated route tree
