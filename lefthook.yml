@@ -2,8 +2,8 @@ pre-commit:
   parallel: true
   commands:
     lint:
-      run: bun run lint:fix {staged_files}
+      run: pnpm lint:fix {staged_files}
       stage_fixed: true
       files: git diff --staged --name-only
     typecheck:
-      run: bun run typecheck
+      run: pnpm typecheck

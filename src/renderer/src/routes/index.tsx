@@ -14,14 +14,14 @@ function HelloORPC() {
   const { data: hello } = useQuery(q.greeting.queryOptions({ input: { name: 'oRPC' } }))
 
   // live subscription (logs latest message)
-  const { data: live } = useQuery(q.onGreeting.experimental_liveOptions({ retry: true }))
+  const { data: live } = useQuery(q.onGreeting.liveOptions({ retry: true }))
 
   if (!hello)
     return null
   return (
     <div>
       <div data-testid="greeting">{hello}</div>
-      {live && <div data-testid="greeting-live">{live}</div>}
+      {live && <div data-testid="greeting-live">{live.message}</div>}
     </div>
   )
 }

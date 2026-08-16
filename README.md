@@ -4,7 +4,8 @@ Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) fr
 
 ## Requirements
 
-- [bun](https://bun.sh/)
+- [Node.js](https://nodejs.org/) 22.18+
+- [pnpm](https://pnpm.io/)
 
 ## Addons
 
@@ -12,7 +13,7 @@ Build upon amazing [electron-vite](https://github.com/alex8088/electron-vite) fr
 - [electron-log](https://github.com/megahertz/electron-log)
 - [electron-conf](https://github.com/alex8088/electron-conf)
 - [@tanstack/router](https://tanstack.com/router)
-- [@tanstack/react-query](https://tanstack.com/query/latest) v5
+- [@tanstack/react-query](https://tanstack.com/query/latest)
 - [shadcn/ui](https://ui.shadcn.com)
 - [tailwindcss](https://tailwindcss.com)
 
@@ -20,12 +21,6 @@ dev:
 
 - [eslint-config](https://github.com/antfu/eslint-config)
 - [bumpp](https://github.com/antfu-collective/bumpp): See [Version Bumping](#version-bumping)
-
-## Notice
-
-The automatic import of UI components with aliases is not functioning correctly. For instance, instead of getting `import { Button } from "@renderer/components/ui/button";`, you may receive `import { Button } from "./components/ui/button";`.
-
-> Currently, manual updating is required. If you have a solution to fix this issue, please submit an issue or pull request.
 
 ## Recommended IDE Setup
 
@@ -36,28 +31,34 @@ The automatic import of UI components with aliases is not functioning correctly.
 ### Install
 
 ```bash
-bun install
+pnpm install
 ```
 
 ### Development
 
 ```bash
-bun run dev
+pnpm dev
+```
+
+### Add UI
+
+```bash
+pnpm exec shadcn add button
 ```
 
 ### Version Bumping
 
-Run `bun run bump` to bump version in cli.
+Run `pnpm bump` to bump version in cli.
 
 ### Build
 
 ```bash
 # For windows
-bun run build:win
+pnpm build:win
 
 # For macOS
-bun run build:mac
+pnpm build:mac
 
 # For Linux
-bun run build:linux
+pnpm build:linux
 ```

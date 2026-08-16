@@ -1,23 +1,28 @@
-import { eventIterator, EventPublisher, os } from '@orpc/server'
+import { MemoryPublisher } from '@orpc/publisher/memory'
+import { eventIterator, os } from '@orpc/server'
 import { z } from 'zod'
 
-const publisher = new EventPublisher<Record<'greeting', string>>()
+const GreetingEvent = z.object({ message: z.string() })
+
+const publisher = new MemoryPublisher<{
+  greeting: z.infer<typeof GreetingEvent>
+}>({
+  resume: { enabled: true },
+})
 
 // /* eslint-disable perfectionist/sort-objects */
 export const router = {
   greeting: os
     .input(z.object({ name: z.string() }))
-    .handler(({ input }) => {
+    .handler(async ({ input }) => {
       const message = `Hello ${input.name}` as const
-      publisher.publish('greeting', `Greeted ${input.name}`)
+      await publisher.publish('greeting', { message: `Greeted ${input.name}` })
       return message
     }),
 
   // stream
-  onGreeting: os.output(eventIterator(z.string())).handler(async function* ({ signal }) {
-    for await (const msg of publisher.subscribe('greeting', { signal })) {
-      yield msg
-    }
+  onGreeting: os.output(eventIterator(GreetingEvent)).handler(async function* ({ lastEventId, signal }) {
+    yield* publisher.subscribe('greeting', { lastEventId, signal })
   }),
 }
 // /* eslint-enable perfectionist/sort-objects */
