@@ -1,3 +1,5 @@
+minimumReleaseAgeExclude:
+  - '@xmldom/xmldom@0.8.15'
 shamefullyHoist: true
 shellEmulator: true
 allowBuilds:
@@ -5,3 +7,5 @@ allowBuilds:
   electron-winstaller: true
   esbuild: true
   lefthook: true
+overrides:
+  '@xmldom/xmldom@>=0.7.0 <=0.8.14': ^0.8.15
